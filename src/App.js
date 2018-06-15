@@ -15,7 +15,7 @@ class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename="/mobile">
         <React.Fragment>
           <HeaderContainer onClick={this.toggleSidebar} />
           <SidebarContainer
