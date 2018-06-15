@@ -15,7 +15,7 @@ class App extends Component {
   }
   render() {
     return (
-      <HashRouter basename="/mobile">
+      <HashRouter>
         <React.Fragment>
           <HeaderContainer onClick={this.toggleSidebar} />
           <SidebarContainer
