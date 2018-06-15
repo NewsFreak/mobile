@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { BrowserRouter } from "react-router-dom"
+import { HashRouter } from "react-router-dom"
 import HeaderContainer from "containers/HeaderContainer"
 import SidebarContainer from "containers/SidebarContainer"
 import Routes from "navigation/Routes"
@@ -15,7 +15,7 @@ class App extends Component {
   }
   render() {
     return (
-      <BrowserRouter basename="/mobile">
+      <HashRouter basename="/mobile">
         <React.Fragment>
           <HeaderContainer onClick={this.toggleSidebar} />
           <SidebarContainer
@@ -28,7 +28,7 @@ class App extends Component {
             <Routes />
           </div>
         </React.Fragment>
-      </BrowserRouter>
+      </HashRouter>
     )
   }
 }
