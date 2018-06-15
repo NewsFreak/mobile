@@ -1,13 +1,13 @@
 {
   "name": "nf-mob",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "BSD-3-Clause",
+  "homepage": "https://newsfreak.github.io/mobile",
   "dependencies": {
     "@material-ui/core": "^1.0.0",
-    "amazon-cognito-identity-js": "^2.0.3",
     "axios": "^0.18.0",
     "build-url": "^1.1.1",
-    "firebase-tools": "^3.18.4",
     "material-ui": "^0.20.0",
     "moment": "^2.22.1",
     "react": "^16.3.2",
@@ -19,19 +19,20 @@
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.2",
     "redux-persist": "^5.9.1",
-    "redux-thunk": "^2.2.0",
-    "serve": "^6.5.7"
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "serve": "serve -s build",
     "prod": "yarn build && yarn serve",
-    "deploy": "firebase deploy",
-    "manual-deploy": "yarn build && firebase deploy",
     "audit": "lighthouse --show http://localhost:4000"
   },
   "devDependencies": {
-    "lighthouse": "^2.9.4"
+    "gh-pages": "^1.2.0",
+    "lighthouse": "^2.9.4",
+    "serve": "^6.5.7"
   }
 }
